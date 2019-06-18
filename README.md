@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Prologue - Jekyll Theme
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-theme-prologue.svg)](https://badge.fury.io/rb/jekyll-theme-prologue)
@@ -137,3 +138,6 @@ Credits:
 		jquery.scrollzer (@ajlkn)
 		Skel (skel.io)
 ```
+=======
+# storyhappygood.github.io
+>>>>>>> 282d3259b23e0bebeaf5153205944b3e96886fc2
