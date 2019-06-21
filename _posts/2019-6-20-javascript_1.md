@@ -61,7 +61,9 @@
 + 对事件进行处理的程序或者函数，称之为事件处理程序
 
 ### onclick事件
+
 + 鼠标单击事件
+
 ```
 <script>
     function displayDate()
@@ -72,15 +74,19 @@
 <p id="demo">This is a paragraph.</p>
 <button type="button" onclick="displayDate()">Display Date</button>
 ```
+
 ### onchange事件
+
 + 与表单相关的事件,当利用text或testarea元素输入的字符值发生改变时发生该事件，同时当在select表格中的一个状态选项发生改变时也会引发该事件
 
 ```
 <textarea name="textarea" cols="50" rows="5" onchange=alert("输入留言内容")></textarea>
 ```
+
 ```
 <input type="text" onchange=alert("输入留言内容")>
 ```
+
 ```
 <select>
   <option value="volvo">Volvo</option>
@@ -89,18 +95,27 @@
   <option value="audi">Audi</option>
 </select>
 ```
+
 ### onselect事件
+
 + onSelect事件是当文本框中的内容被选中时所发生的事件
+
 ```
 <input value="请输入所选择的内容" onselect=alert("选择输入的名称")>
 ```
+
 ### onfocus事件
+
 + 当单击表单对象时，即将光标放在文本框或选择框上时产生onfocus事件。
+
 ```
 <input type="text" value="音乐" onfocus=alert("选择音乐！")>音乐
 ```
+
 ### onload事件
+
 加载网页文档时，会产生该事件。onload事件的作用是在首次载入一个页面文件时检测cookie的值，并用一个变量为其赋值，使其可以被源代码使用。
+
 ````
 <head>
 	<script>
@@ -111,20 +126,31 @@
 </head>
 <body onload="MM_popuMsg('欢迎光临')">
 ````
+
 ### onunload事件
+
 当退出网页时引发onunload事件，并可更新cookie的状态。
+
 ````
 <body onload="MM_popuMsg('欢迎光临')" onunload="MM_popuMsg('关闭本文档')">、
 ````
+
 ### onblur事件
+
 失去焦点onblur事件正好与获得焦点事件相对，当text对象，textarea对象或者select对象不再拥有焦点而推到后台时，引发该事件。
+
 ```
 <br>账号<input type="text" onblur=alert("文档中的'账号'文本域失去焦点") />
 ```
+
 ### onmouseover事件
+
 onmouseover是当鼠标指针移动到某对象范围的上方时触发的事件。
+
 ### onmouseout事件
+
 onmouseout是当鼠标指针离开某对象范围时触发的事件。
+
 ```
 <script>
     function bigImg(x){
@@ -138,12 +164,17 @@ onmouseout是当鼠标指针离开某对象范围时触发的事件。
 </script>
 <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
 ```
+
 ### ondblclick事件
+
 鼠标双击时触发事件
+
 ```
 <p ondblclick=alert("双击了")>双击这段触发一个事件</p>
 ```
+
 ## 浏览器的内部对象
+
 + 浏览器对象（navigator）：提供有关浏览器的信息。
 + 文档对象（document）：document对象包含了与文档元素一起工作的对象。
 + 窗口对象（windows）：windows对象处于对象层次的最顶端，它提供了处理浏览器窗口的方法和属性。
@@ -151,7 +182,9 @@ onmouseout是当鼠标指针离开某对象范围时触发的事件。
 + 历史对象（history）：history对象提供了与历史清单有关的信息。
 
 ### navigator对象
+
 navigator对象可以用来存取浏览器的相关信息
+
 ```
 <script>
     document.write(navigator.appName+"<br>");//浏览器的名称
@@ -162,14 +195,19 @@ navigator对象可以用来存取浏览器的相关信息
 	document.write(navigator.cookieEnabled);//浏览器的cookie功能是否打开
 </script>
 ```
+
 ### document对象
+
 document对象中主要有三个重要的对象：
+
 + anchor锚对象：是指<a name=...></a>标记在HTML源代码中存在时产生的对象，它包含着文档中所有的anchor信息。
 + links链接对象：是指用<a href=...></a>标记链接一个超文本或者超媒体的元素作为一个特定的URL。
 + form窗体对象：是文档对象的元素，它含有多种格式的对象存储信息，使用它可以在JavaScript脚本中编写程序，并可以用来动态的改变文档的行为。
 
 document对象有以下方法：
+
 + 输出显示write（）和writeln（）：该方法主要用来实现在web页面上的输出信息。
+
 ```
 <script>
     function Links()
@@ -192,7 +230,9 @@ document对象有以下方法：
     <a href="https:www.baidu.com">文档3</a>
 </p>
 ```
+
 ## windows对象
+
 windows对象处于对象层次的最顶端，它提供了处理navigator窗口的方法个属性。JavaScript的输入可以通过windows对象来实现。
 
 windows对象常用的方法：
@@ -224,8 +264,11 @@ windows对象常用的方法：
 ```
 
 ## location对象
+
 location对象是一个静态的对象，它描述的是某一个窗口对象所打开的地址。
+
 ### 常用的location属性
+
 | 属性 | 实现的功能 |
 |:----:|:----:|
 | protocal | 返回地址的协议，取值为http：，https：file：等 |
@@ -236,14 +279,20 @@ location对象是一个静态的对象，它描述的是某一个窗口对象所
 | hash | 返回"#"以及其后的内容，如地址为c.html#chapter4，则返回#chapter4；如果地址里没有"#"，则返回空字符串 |
 | search | 返回"？"以及其后的内容，如果地址里没有"？"，则返回空字符串 |
 | href | 返回整个地址，即返回浏览器的地址栏中显示的内容 |
+
 ### loacation对象常用的方法
+
 + reload():相当于IE浏览器上的"刷新"功能
 + repalce():打开一个URL，并取代历史对象中当前位置的地址。用这个方法打开一个URL后，单击浏览器的"后退"按钮将不能返回到之前的页面。
+
 ## history对象
+
 history'对象是浏览器的浏览历史，以下为history对象常用的方法。
+
 + back（）：后退，与单击"后退"按钮是等效的。
 + forward ：前进，与单击"前进按钮"是等效的。
 + go():该方法用来进入指定的页面。
+
 ```
 <input type="button" onclick="history.back()" value="返回">
 <input type="button" onclick="history.forward()" value="前进">
